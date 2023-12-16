@@ -10,12 +10,12 @@ pipeline{
             }
         }
 
-       stage('Docker Build') {
-    	agent any
-      steps {
-      	sh 'docker build -t omarbensalah8/firstlabphaseproject .'
-      }
-    }
+//       stage('Docker Build') {
+  //  	agent any
+    //  steps {
+      //	sh 'docker build -t omarbensalah8/firstlabphaseproject .'
+      //}
+    // }
       stage('Docker Push') {
     	agent any
       steps {
@@ -28,7 +28,7 @@ pipeline{
       stage ('Docker push to hub') {
         agent any
         steps {
-          sh 'docker push omarbensalah8/firstlabphase:latest'
+          sh 'docker push omarbensalah8/firstlabphaseproject:latest'
         }
       }
 }
